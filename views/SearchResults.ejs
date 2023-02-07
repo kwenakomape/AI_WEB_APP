@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="Style2.css">
+</head>
+<body>
+    
+    <h1 class="resultsSize"><%=UserData.length%> results from AI-Web Collections </h1>
+    <h4 class="userQuery">QUERY REQUEST: <%=UserQuery%></h4>
+    
+    <a href="/Visual1"> <button class="searchQuery">Visualise Results of A Query</button></a>
+    
+    <%for(let j = 0; j<UserData.length;j++){%>
+        <div>
+            <div class="summary-record">
+            
+            <h3> <a class ="TopicHeading" href="#"><%=UserData[j]['Article Title']%></a> </h3>
+            <div class="Authors">
+               <!-- <a class ="authorInfo"href="">Olukanmi, P</a>
+                <span>;</span>
+               <a class ="authorInfo"href="">Nelwamondo, F</a>
+               <span>and</span>
+               <a class ="authorInfo"href="">Marwala, T</a>  -->
+               
+               <% AuthorArray =(UserData[j]['Authors']).split(";") %>
+               <%for(let x = 0;x<AuthorArray.length;x++){%>
+                    <!-- <span><%=AuthorArray[x]%>;</span>; -->
+                    <a href="/moreInfo" class ="authorInfo"href=""><%=AuthorArray[x]%>;</a>
+               <%}%>
+               <span class="date" > |<%=UserData[j]['Publication Year']%></span>
+               <!-- <% AuthorArray =(UserData[j]['Authors']).split(";") %>
+            <%for(let x = 0;x<AuthorArray.length;x++){%>
+                <a class ="authorInfo"href=""><%AuthorArray[x]%></a
+            <%}%> -->
+            </div>
+            <div class="sourceTitle">
+                <span><%=UserData[j]['Source Title']%></span>
+            </div>
+
+            
+            <div class="Abstract">
+                <p>
+                    <%=UserData[j]['Abstract']%>
+                </p>
+            </div>
+            <div class="impact">
+                <span> <%=UserData[j]['Cited Reference Count']%> Citations |</span>
+                <span> <%=UserData[j]['Times Cited, WoS Core']%> References |</span>
+                <span><a href=<%=UserData[j]['DOILink']%>>Full text</a> </span>
+                
+            </div>
+            <!-- <%=UserData[j]['Surname'];%>
+            <%=UserData[j]['Initials'];%>
+            <%=UserData[j]['Title'];%>
+            <%=UserData[j]['Rating']%>
+            <%=UserData[j]['Rating Start']%>
+            <%=UserData[j]['Rating End'];%>
+            <%=UserData[j]['Institution'];%>
+            <%=UserData[j]['Primary Research Fields'];%>
+            <%=UserData[j]['Specialisations'];%></div> -->
+            
+        </div>
+    <%}%>
+</body>
+</html>
+

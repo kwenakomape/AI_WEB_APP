@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a query</title>
+    <link rel="stylesheet" type="text/css" href="Style2.css">
+</head>
+<body>
+    <div class="SearchSection">
+        <h1 class="searhHeading">Welcome To Advanced Query Search Builder</h1>
+        <div class="SearchTextArea">
+            
+            <div class="leftHolder">
+                <label for="textareaInput">Query Preview:</label>
+                <form action="/submit" method="post">
+                    <textarea id="textareaInput" name="textareaInput"
+                    rows="3" cols="70" placeholder="Type and edit your query here..."></textarea>
+                    <br>
+                    <button class="textAreaButton">Search</button>
+                    <button class="textAreaButton">Clear</button>
+                </form>
+              
+              
+            </div>
+            <div class="rightHolder">
+                <span class="Instruction">Use the following tags seperated by commas to make a query</span>
+                <br>
+                <span> E.g TP = Machine learning, AU = Marwala T , PY = 2022</span>
+                <p><span class="FieldTags">Field Tags:</span></p>
+                <ul class="dataFields">
+                    <li>TP=Topic</li>
+                    <li>TI=Title</li>
+                    <li>AB=Abstract</li>
+                    <li>AU=Author</li>
+                    <li>RA=Rating</li>
+                    <li>PT=Publication Type</li>
+                    <li>PS=Province</li>
+                    <li>RG=Region</li>
+                    <li>PY=Year Published</li>
+                    <li>IN=Institution</li>
+                    <li>PRF=Primary Research Field</li>
+                    <li>SP=SPECIALISATION</li>
+                    <li>AD=Address</li>
+                    <li>ALL= ALL Fields</li>
+                    </ul>
+            </div>
+        
+            
+
+        </div>
+    </div>
+    
+
+</body>
+</html>
