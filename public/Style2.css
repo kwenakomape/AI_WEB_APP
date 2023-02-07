@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0, 0, 0, 0.75)),url(photo.jpg);
+    /* background-image: url(pic3.jfif); */
+    background-size: cover; 
+    background-position:center;
+
+}
+.SearchSection{
+    width: 100%;
+
+    height: 100vh;
+    /* background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0, 0, 0, 0.75)),url(photo.jpg); */
+    /* background-image: url(pic3.jfif); */
+    /* background-size: cover; 
+    background-position:center; */
+    
+
+}
+.navbar{
+    width: 85%;
+    margin: 0;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    cursor: pointer;
+    color: rgba(248, 166, 217, 0.452);
+    font-weight: bold;
+    font-size: xx-large;
+    padding-left: 12px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position:absolute;
+    top: 10%;
+    color: white;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight:lighter;
+    line-height: 250%;
+    font-size: large;
+    /* color: rgb(191, 212, 115); */
+    color: rgba(245, 245, 245, 0.774);
+}
+.content h1,.description{
+    padding-left: 12px;
+
+}
+.content h1{
+    padding-top: 90px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:265%;
+    color:rgba(219, 223, 222, 0.514);
+    
+    
+}  
+
+.textAreaButton{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight:bolder;
+    border: 2px solid #009688;
+    background: transparent;
+    color: wheat;
+    cursor: pointer;
+    position: relative;
+    color: black;
+}
+
+.homapageButton{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight:bolder;
+    border: 2px solid #009688;
+    background: transparent;
+    color: wheat;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+
+.leftHolder button:hover{
+    background:rgb(109, 192, 137); 
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    padding: 2px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    cursor:text;
+    margin-left: 20px;
+    
+}
+
+label,.searhHeading{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+input{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: large;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+}
+
+::placeholder {
+    font-size: large;
+  }
+
+ /* .leftHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 65%;
+    margin-right: 0.9375rem;;
+} */
+.rightHolder{
+    
+   margin-left: 10%;
+   margin-top: 50px;
+   
+} 
+
+.SearchTextArea{
+    display: flex;
+    flex-direction: row;
+}
+
+/* .FieldTags,.Booleans{
+    margin-right: 25px;
+    
+} */
+
+.dataFields{
+    margin-left: 90px;
+}
+
+.summary-record{
+    /* background-color: #fff; */
+    margin-bottom: 0.625rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.0625rem 0.125rem #0000004d;
+    width:50%;
+    margin-left: 50px;
+    margin-top: 20px;
+    min-height: 13rem;
+    padding: 1.6rem 0.6rem;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.Authors{
+    margin-top: 8px;
+}
+
+.TopicHeading{
+    text-decoration: none;
+}
+
+.date{
+    color: #616161;
+    font-size: .8rem;
+}
+.sourceTitle{
+    color: #5d33bf;
+    font-weight: 400!important;
+    margin-top: 8px;
+
+}
+.Abstract{
+    margin-top: 8px;;
+}
+
+.impact{
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.resultsSize ,.userQuery{
+    margin-top: 15px;
+    margin-left: 50px;
+    
+}
+
+.searchQuery{
+    border-radius: 4px;
+    background-color: #5d33bf;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 300px;
+    color: white;
+    font-family: Source Sans Pro,sans-serif;
+    /* font-size: inherit; */
+    font-weight: 800;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serifS;
+
+}
+.Instruction{
+    font-weight: bolder;
+}
